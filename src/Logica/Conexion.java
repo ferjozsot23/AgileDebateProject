@@ -8,7 +8,7 @@ import java.sql.DriverManager;
 public class Conexion {
     private static String user = "postgres";
     private static String pass = "Kevincraft54";
-    private static Connection connection;
+    public static Connection connection;
 
     public static void initConn(){
         try{
