@@ -13,7 +13,7 @@ public class Mocion {
 
     @Override
     public String toString() {
-        return "Mociòn --> " +
+        return "Moción --> " +
                 "\tID:" + id +
                 "\tDescripción:" + descripcion  +
                 "\tTipo=" + tipo;

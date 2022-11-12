@@ -14,6 +14,7 @@ public class LoginWindow extends JDialog {
         setContentPane(contentPane);
         setModal(true);
         setResizable(false);
+
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
