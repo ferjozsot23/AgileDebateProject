@@ -1,17 +1,30 @@
 package Logica;
 
-public class Agenda {
-    private int[][] horario = new int[7][24];
+import java.util.ArrayList;
 
-    public Agenda() {
-        this.inicializar();
+public class Agenda {
+    private ArrayList listaSalas = new ArrayList<Sala>();
+    private int contSalas;
+    public void agendarSala(Sala sala){
+        listaSalas.add(sala);
+        contSalas++;
     }
 
-    public void inicializar(){
-        for(int i = 0; i<7; i++){
-            for(int j = 0; j< 24; j++){
-                horario[i][j] = 0;
-            }
+    public Agenda() {
+        contSalas=1;
+    }
+
+    public void mostrarSalas(){
+        for(int i=0; i<listaSalas.size();i++){
+            System.out.println(listaSalas.get(i));
         }
+    }
+
+    public int getContSalas() {
+        return contSalas;
+    }
+
+    public ArrayList getListaSalas() {
+        return listaSalas;
     }
 }
