@@ -2,7 +2,7 @@ package Logica;
 
 import java.util.Scanner;
 
-public abstract class Participante {
+public class Participante {
     private int idparticipante;
     private String nombres;
     private String nickname;
