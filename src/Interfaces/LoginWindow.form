@@ -3,7 +3,7 @@
   <grid id="cbd77" binding="contentPane" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="10" left="10" bottom="10" right="10"/>
     <constraints>
-      <xy x="88" y="54" width="350" height="450"/>
+      <xy x="247" y="30" width="350" height="450"/>
     </constraints>
     <properties>
       <background color="-10849294"/>
