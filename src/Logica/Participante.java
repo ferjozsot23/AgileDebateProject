@@ -10,11 +10,11 @@ import java.util.Scanner;
 public class Participante {
     private int idparticipante;
     private String nombres;
+    private String contraseña;
     private String nickname;
     private String sociedadDebate;
 
-    Scanner sc = new Scanner(System.in);
-
+    //Constructores
     public Participante(int idparticipante, String nombres, String nickname, String sociedadDebate) {
         this.idparticipante = idparticipante;
         this.nombres = nombres;
@@ -22,8 +22,29 @@ public class Participante {
         this.sociedadDebate = sociedadDebate;
     }
 
+    public Participante(int idparticipante, String nombres, String contraseña) {
+        this.idparticipante = idparticipante;
+        this.nombres = nombres;
+        this.contraseña = contraseña;
+    }
+
+    //Getters
+
+    public String getNombres() {
+        return nombres;
+    }
+
+    public String getContraseña() {
+        return contraseña;
+    }
+
+    public int getIdparticipante() {
+        return idparticipante;
+    }
+
     public void crearSala(Agenda agenda){
 
+        Scanner sc = new Scanner(System.in);
         //-----------------------
         System.out.println("¿Qué día de la semana desea participar?+" +
                 "\n1:Lunes" +
@@ -65,6 +86,7 @@ public class Participante {
     }
 
     public void unirseSala(Agenda agenda) {
+        Scanner sc = new Scanner(System.in);
         agenda.mostrarSalas();
         System.out.println("Ingrese el ID de la sala a unirse");
         int idSala = sc.nextInt();

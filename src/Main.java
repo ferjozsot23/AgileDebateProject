@@ -6,8 +6,9 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+
         //Con consola
+        Scanner sc = new Scanner(System.in);
         Agenda agendaSalas = new Agenda();
 
         Participante participante = new Participante(1, "Juan", "El destructor", "OFN");

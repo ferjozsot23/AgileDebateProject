@@ -1,10 +1,12 @@
 package Interfaces;
 
+import Controladores.ControladorLoginW;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class LoginWindow extends JDialog {
+public class LoginWindow extends JDialog implements ControladorLoginW {
     private JPanel contentPane;
     private JTextField usuarioTextField;
     private JTextField contraseñaTextField;
@@ -14,23 +16,31 @@ public class LoginWindow extends JDialog {
         setContentPane(contentPane);
         setModal(true);
         setResizable(false);
-
-        loginButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent) {
-
-            }
-        });
+        loginButton.addActionListener(accionBotonLogin);
     }
 
+    //Acciones de botones
+    ActionListener accionBotonLogin = new ActionListener(){
+        public void actionPerformed(ActionEvent actionEvent) {
+            verificarLogin();
+            abrirMainWindow(1);
+        }
+    };
 
-
-
-    /*public static void main(String[] args) {
-        LoginWindow dialog = new LoginWindow();
-        dialog.pack();
-        dialog.setVisible(true);
+    //Métodos de interacción
+    private void abrirMainWindow(int idUsuario){
+        MainWindow mainWindow = new MainWindow(idUsuario);
+        mainWindow.pack();
+        this.setVisible(false);
+        mainWindow.setVisible(true);
         System.exit(0);
     }
-     */
+
+    //Métodos rederigidos a controladores
+    private void verificarLogin() {
+        String usuario = usuarioTextField.getText();
+        String contraseña = contraseñaTextField.getText();
+        verficarIngresoValido(usuario, contraseña);
+    }
+
 }
