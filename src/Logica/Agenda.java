@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Agenda {
     private ArrayList listaSalas = new ArrayList<Sala>();
     private int contSalas;
+
     public void agendarSala(Sala sala){
         listaSalas.add(sala);
         contSalas++;
